@@ -14,7 +14,3 @@ export default function Rooms() {
             </Hero>
     )
 }
-/*
-1:10:09
-
-*/

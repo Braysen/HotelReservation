@@ -94,7 +94,8 @@
     left: 0;
     width: 100%;
     padding: 0.75rem 2rem;
-    background: var(--offWhite);
+    /*background: var(--offWhite);*/
+    background: white;/*agregado*/
     z-index: 1;
   }
   .nav-header {
@@ -143,6 +144,8 @@
       max-width: 1170px;
       margin: 0 auto;
       display: flex;
+      justify-content: space-between;
+      transition: 1s;
     }
     .nav-links {
       height: auto;
@@ -163,6 +166,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-attachment: fixed;/*agregado reciente*/
   }
   .roomsHero {
     background-image: url("./resources/images/room-2.jpeg");
@@ -172,7 +176,8 @@
   /* Banner */
   .banner {
     display: inline-block;
-    background: rgba(0, 0, 0, 0.5);
+    /*background: rgba(0, 0, 0, 0.5);*/
+    background: rgba(0, 0, 0, 0.3);/*agregado*/
     color: var(--mainWhite);
     padding: 2rem 1rem;
     text-align: center;
@@ -219,6 +224,7 @@
     letter-spacing: var(--mainSpacing);
     text-transform: capitalize;
     margin-bottom: 1rem;
+    color: #AF9A7D;/*agregado*/
   }
   .section-title div {
     width: 5rem;
@@ -233,8 +239,9 @@
     padding: 5rem 0;
   }
   .services {
-    background: var(--darkGrey);
+    /*background: var(--darkGrey);*/
     text-align: center;
+    background: #101010;/*agregado*/
   }
   .services-center {
     width: 90vw;
@@ -252,10 +259,13 @@
   }
   .services h6 {
     letter-spacing: var(--mainSpacing);
+    color: #AF9A7D;/*agregado*/
+    /*text-transform: uppercase;*/
   }
   .services p {
     width: 80%;
     margin: 0 auto;
+    color: lightgray;/*agregado*/
   }
   @media screen and (min-width: 992px) {
     .services-center {
