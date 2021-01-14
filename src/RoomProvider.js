@@ -9,10 +9,18 @@ export default class RoomProvider extends Component {
         sortedRooms: [],
         featuredRooms: [],
         loading: true
-    }
+    };//getData
 
     componentDidMount(){
+        //this.getData
         let rooms = this.formatData(items);
+        let featuredRooms = rooms.filter(room => room.featured === true);
+        this.setState({
+            rooms,
+            featuredRooms,
+            sortedRooms: rooms,
+            loading: false
+        })
     }
 
     formatData(items){
@@ -21,9 +29,14 @@ export default class RoomProvider extends Component {
             let images = item.fields.images.map(image => image.fields.file.url);
 
             let room = {
-                ...item.fields
-            }
+                ...item.fields,
+                images,
+                id
+            };
+
+            return room;
         });
+        return tempItems;
     }
 
     render() {
@@ -39,3 +52,9 @@ export default class RoomProvider extends Component {
 const RoomConsumer = RoomContext.Consumer;
 
 export {RoomProvider, RoomConsumer, RoomContext};
+
+
+/*
+
+1:58:45
+*/
