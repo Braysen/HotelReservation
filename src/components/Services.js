@@ -31,7 +31,7 @@ export default class Services extends Component {
     render() {
         return (
             <section className="services">
-                <Title title="services"/>
+                <Title title="Our amazing services"/>
                 <div className="services-center">
                     {this.state.services.map((item, index) => {
                         return(
