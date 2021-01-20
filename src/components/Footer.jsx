@@ -5,7 +5,6 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 export default function Footer() {
     return (
-        <main className="l-main">
         <footer className="footer section bd-container">
             <div className="footer__container bd-grid">
                 <div className="footer__content">
@@ -38,7 +37,7 @@ export default function Footer() {
                 <div className="footer__content">
                     <h3 className="footer__title">Adress</h3>
                     <ul>
-                        <li>Lima - Perú</li>
+                        <li>Máncora - Piura</li>
                         <li>Jr Union #999</li>
                         <li>999 - 888 - 777</li>
                         <li>luxuryresort@gmail.com</li>
@@ -47,6 +46,5 @@ export default function Footer() {
             </div>
             <p className="footer__copy">&#169; 2021 JBraToc. All right reserved.</p>
         </footer>
-        </main>
     )
 }

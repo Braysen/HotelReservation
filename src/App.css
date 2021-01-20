@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   :root {
-    --primaryColor: darkgoldenrod;;/*#af9a7d*/
+    --primaryColor: darkgoldenrod;/*#af9a7d*/
     --mainWhite: #fff;
     --offWhite: #1d2521;/*#f7f7f7*/
     --mainBlack: #222;
