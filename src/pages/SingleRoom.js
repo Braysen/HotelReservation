@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import defaultBcg from '../resources/images/room-1.jpeg'
-import Hero from '../components/Hero'
+//import Hero from '../components/Hero'
 import Banner from '../components/Banner'
 import {Link} from 'react-router-dom'
 import {RoomContext} from '../RoomProvider'
@@ -39,15 +39,54 @@ export default class SingleRoom extends Component {
                 pets,
                 images
               } = room;
+        const [mainImg, ...defaultImg] = images;
+
         return (
-                <StyledHero img={images[0] || this.state.defaultBcg}>
+            <>
+                <StyledHero img={mainImg || this.state.defaultBcg}>
                     <Banner title={`${name} room`}>
                         <Link to='/rooms' className="btn-primary">
                             back to rooms
                         </Link>
                     </Banner>
                 </StyledHero>
+                <section className="single-room">
+                    <div className="single-room-images">
+                        {defaultImg.map((item, index) => {
+                            return <img key={index} src={item} alt={name}></img>
+                        })}
+                    </div>
+                    <div className="single-room-info">
+                        <article className="desc">
+                            <h3 style={{color: 'var(--text-color)'}}>details</h3>
+                            <p style={{color: 'var(--title-color)'}}>{description}</p>
+                        </article>
+                        <article className="info">
+                            <h3 style={{color: 'var(--text-color)'}}>info</h3>
+                            <h6 style={{color: 'var(--title-color)'}}>price : ${price}</h6>
+                            <h6 style={{color: 'var(--title-color)'}}>size : ${size} SOFT</h6>
+                            <h6 style={{color: 'var(--title-color)'}}>
+                                max capacity : {""}{
+                                    capacity > 1 ? `${capacity} people` :
+                                    `${capacity} person`
+                                }
+                            </h6>
+                            <h6 style={{color: 'var(--title-color)'}}>{pets ? "pets allowed" : "no pets allowed"}</h6>
+                            <h6 style={{color: 'var(--title-color)'}}>
+                                {breakfast && "free breakfast included"}
+                            </h6>
+                        </article>
+                    </div>
+                </section>
+                <section className="room-extras">
+                    <h6 style={{color: 'var(--text-color)'}}>extras</h6>
+                    <ul className="extras" style={{color: 'var(--title-color)'}}>
+                        {extras.map((item, index) => {
+                            return <li key={index}>- {item}</li>
+                        })}
+                    </ul>
+                </section>
+            </>
         )
     }
 }
-//2:50:49

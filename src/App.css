@@ -106,6 +106,7 @@
     justify-content: space-between;
   }
   .nav-btn {
+    color: var(--primaryColor);
     background: transparent;
     border: none;
     cursor: pointer;
