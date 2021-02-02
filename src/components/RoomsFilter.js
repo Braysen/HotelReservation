@@ -26,7 +26,7 @@ export default function RoomsFilter({rooms}) {
 
     types =  types.map((item, index) => {
         return <option value={item} key={index}>{item}</option>
-    })
+    })/* 4:21:14 */
 
     return (
         <section className="filter-container">
