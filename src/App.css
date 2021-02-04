@@ -590,7 +590,8 @@
   }
   .form-control {
     width: 100%;
-    background: transparent;
+    /*background: transparent;*/
+    background: var(--title-color);
     font-size: 1rem;
   }
   .size-inputs {

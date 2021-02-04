@@ -92,6 +92,11 @@ export default function RoomsFilter({rooms}) {
                         <input type="checkbox" name="breakfast" id="breakfast" checked={breakfast} onChange={handleChange}/>
                         <label htmlFor="breakfast" style={{color: 'white'}}>breakfast</label>
                     </div>
+
+                    <div className="single-extra">
+                        <input type="checkbox" name="pets" id="pets" checked={pets} onChange={handleChange}/>
+                        <label htmlFor="pets" style={{color: 'white'}}>pets</label>
+                    </div>
                 </div>
             </form>
         </section>
