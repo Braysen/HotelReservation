@@ -28,7 +28,7 @@ export default class Navbar extends Component {
                     <ul className={this.state.isOpen?"nav-links show-nav": "nav-links"}>
                         <Link to="/">Home</Link>
                         <Link to="/rooms">Rooms</Link>
-                        <a href=" ">
+                        <a href="# ">
                             <Brightness2Icon/>
                         </a>
                     </ul>
@@ -37,5 +37,3 @@ export default class Navbar extends Component {
         )
     }
 }
-
-//5:28:35

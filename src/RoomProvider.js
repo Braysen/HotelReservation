@@ -23,7 +23,8 @@ export default class RoomProvider extends Component {
     getData = async () => {
         try{
             let response = await Client.getEntries({
-                content_type: "beachResortRoomExample"
+                content_type: "beachResortRoomExample",
+                order: "fields.price"
             });
             
             let rooms = this.formatData(response.items);
@@ -146,5 +147,3 @@ export function withRoomConsumer(Component){
 }
 
 export {RoomProvider, RoomConsumer, RoomContext};
-
-//2:35:01

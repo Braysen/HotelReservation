@@ -21,4 +21,3 @@ export default function RoomsList({rooms}) {
         </section>
     )
 }
-//4:40:32
