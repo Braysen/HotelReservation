@@ -9,6 +9,8 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "chart.js": "^2.9.4",
+    "contentful": "^8.1.7",
+    "dotenv": "^8.2.0",
     "leaflet": "^1.7.1",
     "numeral": "^2.0.6",
     "react": "^16.13.1",

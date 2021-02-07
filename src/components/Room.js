@@ -4,9 +4,9 @@ import defaultImg from '../resources/images/room-1.jpeg'
 import PropTypes from 'prop-types'
 
 export default function Room({room}) {
-    const {name, slug, images, price} = room;
+    const {id, name, slug, images, price} = room;
     return (
-        <article className="room">
+        <article className="room" key={id}>
             <div className="img-container">
                 <img src={images[0] || defaultImg} alt="single room"/>
                 <div className="price-top">
